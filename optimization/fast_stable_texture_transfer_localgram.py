@@ -184,9 +184,11 @@ def gram_matrix(y):
     local_ch = ch // 2 #if ch < 64 else 64
     local_wh = w*h
   
-    gram = torch.Tensor(ch-local_ch+1, local_ch, local_ch).to(device)
-    for i in range(ch-local_ch+1):
-        features = y[0][i:i+local_ch].view(local_ch, local_wh)
+    gram = torch.Tensor(ch, local_ch, local_ch).to(device)
+    for i in range(ch):
+        indices = [x%ch for x in range(i,i+local_ch)]        
+        #features = y[0][i:(i+local_ch)].view(local_ch, local_wh)
+        features = y[0,indices].view(local_ch, local_wh)
         features_t = features.transpose(1, 0)
         gram[i] = torch.mm(features, features_t)#.div(local_ch*w*h)
     return gram.div(b * local_ch * w * h)
