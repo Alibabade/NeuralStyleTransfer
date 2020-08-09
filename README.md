@@ -14,20 +14,23 @@ Install pytorch-colors to preserve original colors of content image onto results
 # Examples
 
 ## Examples from Gradient-based methods
-1. Results produced by a normal gradient-based neural style transfer 
+### 1. Results produced by a normal gradient-based neural style transfer 
 <div align='center'>
   <img src='optimization/output/result_opt1.png' height='400px'>
   <img src='optimization/output/result_opt2.png' height='400px'>
 </div>
-2. Results produced by gradient-based method with multi-labels in corresponding masks.
+### 2. Results produced by gradient-based method with multi-labels in corresponding masks.
 <div align='center'>
   <img src='optimization/output/result_opt3.png' height='400px'>
 </div>
-3. Gradual transferred results
+### 3. Gradual transferred results
 <div align='center'>
-  <img src='optimization/output/result_opt4.png' height='400px'>  
+  <img src='optimization/output/result_opt4.png' height='350px'>  
 </div>
 
 ## Examples from Feed-forward methods
-
+### 1. Results produced with multi-labels in corresponding style masks
+<div align='center'>
+  <img src='feed-forward/output/result_feed-forward_multilabels.png' height='400px'>  
+</div>
 # Parameters
