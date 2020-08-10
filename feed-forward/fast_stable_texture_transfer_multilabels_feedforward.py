@@ -849,8 +849,10 @@ def run_feedforward_stylization(args):
     style_model.load_state_dict(state_dict)
     style_model = style_model.eval().to(device)
 
+    start_time = time.time()
     output = style_model(input_image)
-    
+    print('run time : {:4f} s'.format(time.time() - start_time))
+
     if args.original_colors == 1:
         output = original_colors(content_image,output)    
     save_image(filename=args.output_image, data=output.detach()) 
@@ -917,7 +919,7 @@ def main():
        print('run time : {:4f} h'.format((time.time() - start_time)/3600))
     else:
        run_feedforward_stylization(args)
-       print('run time : {:4f} s'.format(time.time() - start_time))
+       
                  
 
 
