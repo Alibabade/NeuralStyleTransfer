@@ -39,5 +39,7 @@ Install pytorch-colors to preserve original colors of content image onto results
 ### 2. Results produced by normal feed-forward networks
 <div align='center'>
   <img src='feed-forward/output/result_feed-forward2.png' height='400px'>  
+  <img src='feed-forward/output/result_feed-forward3.png' height='400px'>  
 </div>
+
 # Parameters

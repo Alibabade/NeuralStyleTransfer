@@ -780,7 +780,7 @@ def run_feedforward_stylization(args):
   
 
     content_image = preprocess(content_image)
-    print('content image shape:', content_image.shape)
+    #print('content image shape:', content_image.shape)
 
 
     if args.semantic == 1:
